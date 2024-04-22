@@ -14,6 +14,9 @@ public class JProtobufTest {
         request.setPassword("admin");
         Codec<ReqAccountLogin> simpleTypeCodec = ProtobufProxy
                 .create(ReqAccountLogin.class);
+
+        Codec<ResAccountLogin> simpleTypeCodecres = ProtobufProxy
+                .create(ResAccountLogin.class);
         try {
             // 序列化
             byte[] bb = simpleTypeCodec.encode(request);

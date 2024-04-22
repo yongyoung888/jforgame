@@ -1,5 +1,3 @@
-package jforgame.demo.game.login.message.res;
-
 import com.baidu.bjf.remoting.protobuf.annotation.ProtobufClass;
 import jforgame.demo.game.Modules;
 import jforgame.demo.game.login.LoginDataPool;
@@ -10,16 +8,10 @@ import jforgame.socket.share.message.Message;
 import java.util.ArrayList;
 import java.util.List;
 
-@MessageMeta(module = Modules.LOGIN, cmd = LoginDataPool.RES_LOGIN)
 @ProtobufClass
-public class ResAccountLogin implements Message {
+public class ResAccountLogin {
 
-	/** 角色列表 */
 	private List<PlayerLoginVo> players = new ArrayList<>();
-
-	public ResAccountLogin() {
-
-	}
 
 	public List<PlayerLoginVo> getPlayers() {
 		return players;

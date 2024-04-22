@@ -30,9 +30,9 @@ public class ProtobufMessageCodec implements MessageCodec {
 	public byte[] encode(Object message) {
 		//写入具体消息的内容
 		byte[] body = null;
-		Class msgClazz = message.getClass();
+		Class<?> msgClazz = message.getClass();
 		try {
-			Codec<Object> codec = ProtobufProxy.create(msgClazz);
+			Codec<java.lang.Object> codec = ProtobufProxy.create((Class<Object>) msgClazz);
 			body = codec.encode(message);
 		} catch (Exception e) {
 			logger.error("read message failed", e);

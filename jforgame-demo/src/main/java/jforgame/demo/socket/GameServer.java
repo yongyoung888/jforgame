@@ -1,5 +1,6 @@
 package jforgame.demo.socket;
 
+import jforgame.codec.protobuf.ProtobufMessageCodec;
 import jforgame.codec.struct.StructMessageCodec;
 import jforgame.commons.ClassScanner;
 import jforgame.commons.TimeUtil;
@@ -119,7 +120,7 @@ public class GameServer {
 //		}
 		socketServer = TcpSocketServerBuilder.newBuilder().bindingPort(HostAndPort.valueOf(ServerConfig.getInstance().getServerPort()))
 				.setMessageFactory(GameMessageFactory.getInstance())
-				.setMessageCodec(new StructMessageCodec())
+				.setMessageCodec(new ProtobufMessageCodec())
 				.setSocketIoDispatcher(new MessageIoDispatcher(ServerScanPaths.MESSAGE_PATH))
 				.build();
 

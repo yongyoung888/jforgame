@@ -5,6 +5,7 @@ import jforgame.demo.game.accout.entity.AccountEnt;
 import jforgame.demo.game.core.MessagePusher;
 import jforgame.demo.game.database.user.PlayerEnt;
 import jforgame.demo.game.gm.message.ResGmResult;
+import jforgame.demo.game.login.message.req.ReqAccountLogin;
 import jforgame.demo.game.login.message.res.ResAccountLogin;
 import jforgame.demo.game.login.message.vo.PlayerLoginVo;
 import jforgame.demo.game.player.model.AccountProfile;
@@ -44,6 +45,11 @@ public class LoginManager {
 		ResAccountLogin loginMessage = new ResAccountLogin();
 		loginMessage.setPlayers(players);
 		MessagePusher.pushMessage(session, loginMessage);
+
+//		ReqAccountLogin loginMessage = new ReqAccountLogin();
+//		loginMessage.setAccountId(456);
+//		loginMessage.setPassword("testres");
+//		MessagePusher.pushMessage(session, loginMessage);
 		
 		if ("kinson".equals(password)) {
 			MessagePusher.pushMessage(session,new ResPlayerEnterScene());

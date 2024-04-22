@@ -35,6 +35,12 @@
             <groupId>com.baidu</groupId>
             <artifactId>jprotobuf-precompile-plugin</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.github.jforgame</groupId>
+            <artifactId>jforgame-demo</artifactId>
+            <version>1.2.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

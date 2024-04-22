@@ -166,6 +166,13 @@
                 <version>2.2.9</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>4.26.1</version>
+                <scope>compile</scope>
+            </dependency>
+
             <!-- 数据库相关 -->
             <dependency>
                 <groupId>mysql</groupId>
